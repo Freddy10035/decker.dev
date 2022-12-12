@@ -97,3 +97,13 @@ Route::get('/findmore', function (){
     return $posts;
 
 });
+
+Route::get('/basicinsert', function (){
+
+    $post = new App\Models\Post;
+    $post->title = 'New Eloquent Insert';
+    $post->content = 'Wow! Eloquent is really cool to work with!!';
+
+    $post->save();
+
+});
